@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Ejercicio-FinalBootstrap-dia30mar.css">
+    <link rel="stylesheet" href="./bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>VideoGames Shopping Online</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .fondo--productos {
+            background-image: url("./imagenes-iconos/fondo-productos2.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .ct_item-active {
+            background: #2D3E50;
+        }
+        
+        .products-list img {
+            width: 250px;
+            height: 200px;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-item {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            box-shadow: 5px 5px 5px rgb(168, 168, 168);
+            border: solid 1px rgb(207, 207, 207);
+            border-radius: 10px;
+            overflow: hidden;
+            align-self: flex-start;
+            transition: all .4s;
+        }
+        
+        .product-item a {
+            height: 40px;
+            display: grid;
+            place-content: center;
+            text-decoration: none;
+            margin-top: 10px;
+            color: white;
+            background-color: rgb(136, 41, 136);
+        }
+        
+        h1 {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!------------------------------------------------- INICIO HEADER ------------------------------------------------->
+    <header class="row container-fluid d-flex justify-content-between align-items-center me-auto ms-auto" style="width: 100%;">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-1 col-xxl-1 mt-1 d-flex justify-content-center">
+            <img src="./imagenes-iconos/logo.gif" alt="" class="figure-img img-fluid border rounded-2 " style="width: 120px; height: 80px;">
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3">
+            <div class="row text-center">
+                <h1 class="col-sm-12 col-md-12 col-lg-12 text-light">VideoGames</h1>
+                <h4 class="col-sm-12 col-md-12 col-lg-12 text-light">Shopping Online</h4>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2 d-flex justify-content-center align-items-center">
+            <img src="./imagenes-iconos/whatsapp.svg" alt="" class="figure-img img-fluid" style="width: 30px; height: 30px; font-size: 15px;">
+            <h3 class="text-light">3124567890</h3>
+        </div>
+    </header>
+    <!------------------------------------------------- FINAL HEADER ------------------------------------------------->
+
+    <!------------------------------------------------- INICIO NAV ------------------------------------------------->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top mb-5">
+        <div class="container-fluid">
+            <a href="./index.html"><img src="./imagenes-iconos/casa.png" alt="" style="width: 50px; height: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./ventaProductos.html">Productos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="./ventaConsolasSegundaMano.html">Vende tus consolas de segunda mano</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                                <a class="dropdown-item" href="./reparacionConsolas.html">Reparacion de Consolas y Accesorios</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#formulario">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!------------------------------------------------- FINAL NAV ------------------------------------------------->
+
+    <div class="row mt-5">
+        <div class="col-12 fondo--productos d-flex p-0 m-0 justify-content-center align-items-center mt-3 mb-5" style="width: 100%; height: 200px;">
+            <h1 class="titulo-principal rounded-3 h-25 text-center d-flex align-items-center justify-content-center" style="color: white; background-color: rgba(136, 41, 136, 0.658); box-shadow: 1px 1px 3px 6px rgba(136, 41, 136, 0.658); width: 30%;">Consolas</h1>
+        </div>
+        <div class="row  ms-auto me-auto bg-dark bg-opacity-75 rounded-3" style="width: 90%;">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3 text-center mt-5 mb-5">
+                <div class="category_list d-flex flex-column gap-3 mt-5">
+                    <button href="#" class="category_item btn btn-primary w-50 me-auto ms-auto titulo" category="todos">Todo</button>
+                    <button href="#" class="category_item btn btn-primary w-50 me-auto ms-auto titulo" category="nintendo">Nintendo</button>
+                    <button href="#" class="category_item btn btn-primary w-50 me-auto ms-auto titulo" category="playStation">PlayStation</button>
+                    <button href="#" class="category_item btn btn-primary w-50 me-auto ms-auto titulo" category="xbox">Xbox</button>
+                    <button href="#" class="category_item btn btn-primary w-50 me-auto ms-auto titulo" category="videoJuegos">Videojuegos</button>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9 col-xxl-9 mt-2 mb-2 p-3">
+                <section class="products-list d-flex flex-wrap justify-content-center gap-4">
+                    <!-- Button trigger modal -->
+                    <button type="button" category="nintendo" class="btn product-item p-0 bg-light" data-bs-toggle="modal" data-bs-target="#gameBoyAdvanse">
+                        <img src="./imagenes-productos/nintendoGameBoyAdvance.jpg" alt="">
+                        <a href="#" style="width: 100%;">Consola Game Boy Advanse</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="gameBoyAdvanse" tabindex="-1" aria-labelledby="gameBoyAdvanseLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="gameBoyAdvanseLabel">Consola Game Boy Advanse</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p>La Game Boy Advance , abreviada como GBA, es una consola de videojuegos de la compañía Nintendo, fabricada desde marzo de 2001 hasta 2008. La GBA forma parte de la sexta generación de videoconsolas. El modelo original
+                                        no tenía una pantalla con iluminación, lo que fue solucionado con la Game Boy Advance SP, un rediseño de la consola que incluía algunas mejoras como la pantalla con iluminación y el uso de baterías de litio. Finalmente
+                                        sufrió dos últimos rediseños en el 2005, una versión de la SP con pantalla retroiluminada y la Game Boy Micro.<br>
+                                        <br><strong>Precio:</strong> $819.999 pesos
+                                        <br><strong>Edición:</strong> Gold Pokémon Edition
+                                        <br><strong>Color:</strong> Gold
+                                        <br><strong>Memoria RAM:</strong> 32 KB
+                                        <br><strong>Memoria VRAM:</strong> 96 KB
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" category="nintendo" class="btn product-item p-0 bg-light" data-bs-toggle="modal" data-bs-target="#nintendoClassic64">
+                        <img src="./imagenes-productos/nintendoClassic64.jpg" alt="">
+                        <a href="#" style="width: 100%;">Consola Nintendo Classic 64</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="nintendoClassic64" tabindex="-1" aria-labelledby="nintendoClassic64Label" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="nintendoClassic64Label">Consola Nintendo Classic 64</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p><br><strong>Precio:</strong> $789.999 pesos
+                                        <br><strong>CPU:</strong> Arquitectura MIPS 64-bit RISC CPU R4300i (serie R4000 personalizada), a 93,75 MHz
+                                        <br><strong>Co-procesador:</strong> RCP: SP (procesador de sonido y gráficos) y DP (procesador de píxeles) incorporados desarrollado por Silicon Graphics, funciona a 62,5 MHz.
+                                        <br><strong>Procesador de video (GPU):</strong> Búfer Z, anti-aliasing (filtro anti-dentado), mapeado de texturas realista: interpolación de mapas MIP tri-lineal filtrada, corrección de perspectiva, mapeado del
+                                        entorno.
+                                        <br><strong>Memoria:</strong> RAMBUS D-RAM 4 Mbytes (Ampliable a 8 Mbytes mediante Expansion Pak), velocidad de transmisión: 4,500 Mbit/sec, máximo frecuencia 500 MHz.
+                                        <br><strong>Resolución:</strong> 256 * 224 ~ 640 * 480 puntos, modo de desentrelazado sin parpadeo
+                                        <br><strong>Dimensiones:</strong> ancho 260 mm, fondo 190 mm, alto 73 mm.
+                                        <br><strong>Peso:</strong> 1,1 kg (2,42 lb).
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" category="nintendo" class="btn product-item p-0 bg-light" data-bs-toggle="modal" data-bs-target="#nintendoDS">
+                        <img src="./imagenes-productos/nintendoDS.jpg" alt="">
+                        <a href="#" style="width: 100%;">Consola Nintendo DS</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="nintendoDS" tabindex="-1" aria-labelledby="nintendoDSLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="nintendoDSLabel">Consola Nintendo DS</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p><br><strong>Precio:</strong> $899.999 pesos
+                                        <br><strong>CPU:</strong>ARM9, ARM7
+                                        <br><strong>gpu:</strong>DMP Pica200
+                                        <br><strong>Color:</strong> PLATEADO - ROSADO
+                                        <br><strong>Capacidad:</strong> 256 KB
+                                        <br><strong>Memoria RAM:</strong> 4 MB
+                                        <br><strong>Capacidad de batería:</strong> 1000 mAh
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" category="nintendo" class="btn product-item p-0 bg-light" data-bs-toggle="modal" data-bs-target="#nintendoSWITCH">
+                        <img src="./imagenes-productos/nintendoSWITCH.jpg" alt="">
+                        <a href="#" style="width: 100%;">Consola Nintendo SWITCH</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="nintendoSWITCH" tabindex="-1" aria-labelledby="nintendoSWITCHLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="nintendoSWITCHLabel">Consola Nintendo SWITCH</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p><br><strong>Precio:</strong> $1.699.900 pesos
+                                        <br><strong>Submodelo:</strong> OLED
+                                        <br><strong>Color:</strong> Rojo neón - Azul neón - Negro
+                                        <br><strong>Resolución máxima de salida de video:</strong> 1920 px * 1080 px
+                                        <br><strong>Tipos de tarjetas de memoria:</strong> Micro-SD, Micro-SDXC, Micro-SDHC
+                                        <br><strong>Capacidad:</strong> 64 GB
+                                        <br><strong>Memoria RAM:</strong> 4 GB
+                                        <br><strong>Tipo de memoria:</strong> LPDDR4
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" category="nintendo" class="btn product-item p-0 bg-light"  data-bs-toggle="modal" data-bs-target="#nintendoWii">
+                        <img src="./imagenes-productos/nintendoWii.jpg" alt="">
+                        <a href="#" style="width: 100%;">Consola Nintendo Wii</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="nintendoWii" tabindex="-1" aria-labelledby="nintendoWiiLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="nintendoWiiLabel">Consola Nintendo Wii</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p><br><strong>Precio:</strong> $800.000 pesos
+                                        <br><strong>Edición:</strong> Standard
+                                        <br><strong>Capacidad:</strong> 1000 GB
+                                        <br><strong>Tipos de tarjetas de memoria:</strong> GameCube Memory Card,SD,SDHC
+                                        <br><strong>Tipos de memoria:</strong> GDDR3,eDRAM
+                                        <br><strong>Memoria RAM:</strong> 24 MB
+                                        <br><strong>Memoria VRAM:</strong> 64 MB
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" category="nintendo" class="btn product-item p-0 bg-light" data-bs-toggle="modal" data-bs-target="#nintendoWiiU">
+                        <img src="./imagenes-productos/nintendoWiiU.jpg" alt="">
+                        <a href="#" style="width: 100%;">Consola Nintendo Wii U</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="nintendoWiiU" tabindex="-1" aria-labelledby="nintendoWiiULabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="nintendoWiiULabel">Consola Nintendo Wii U</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p><br><strong>Precio:</strong> $678.000 pesos
+                                        <br><strong>CPU:</strong> Microprocesador multinúcleo basado en IBM PowerⓇ
+                                        <br><strong>GPU:</strong> Alta definición basada en AMD Radeon™
+                                        <br><strong>Dimensiones:</strong> Aproximadamente 4,6 cm de alto, 26,8 cm de profundidad y 17,2 cm de largo.
+                                        <br><strong>Peso:</strong> 1.6 KG
+                                        <br><strong>Memoria RAM:</strong> 32 GB
+
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" category="playStation" class="btn product-item p-0 bg-light" data-bs-toggle="modal" data-bs-target="#sonyPlayStationClassic">
+                        <img src="./imagenes-productos/sonyPlayStationClassic.png" alt="">
+                        <a href="#" style="width: 100%;">Consola Sony PlayStation Classic</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="sonyPlayStationClassic" tabindex="-1" aria-labelledby="sonyPlayStationClassicLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="sonyPlayStationClassicLabel">Consola Sony PlayStation Classic</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p><br><strong>Precio:</strong> $819999 pesos
+                                        <br><strong>Accesorios incluidos:</strong> 1 cable HDMI,1 cable USB,Materiales impresos
+                                        <br><strong>Títulos de juegos incluidos:</strong> Battle Arena Toshinden,Cool Boarders 2,Destruction Derby,Final Fantasy VII,Grand Theft Auto,y otros
+                                        <br><strong>Resolución máxima de salida de video:</strong> 1280 px x 720 px
+                                        <br><strong>Capacidad:</strong> 16 GB
+                                        <br><strong>Tipos de memoria:</strong> DDR3
+                                        <br><strong>Memoria RAM:</strong> 1 GB
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" category="playStation" class="btn product-item p-0 bg-light" data-bs-toggle="modal" data-bs-target="#playStation3">
+                        <img src="./imagenes-productos/playStation3.jpg" alt="">
+                        <a href="#" style="width: 100%;">Consola PlayStation 3</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="playStation3" tabindex="-1" aria-labelledby="playStation3Label" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="playStation3Label">Consola PlayStation 3</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p><br><strong>Precio:</strong> $790.000 pesos
+                                        <br><strong>CPU:</strong> Cell Broadband Engine
+                                        <br><strong>GPU:</strong> RSX
+                                        <br><strong>Velocidad del procesador:</strong> 3.2 GHz
+                                        <br><strong>Capacidad:</strong> 500 GB
+                                        <br><strong>Tipos de memoria:</strong> DDR3
+                                        <br><strong>Memoria RAM:</strong> 512 MB
+                                        <br><strong>Memoria VRAM:</strong> 256 MB
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" category="playStation" class="btn product-item p-0 bg-light" data-bs-toggle="modal" data-bs-target="#playStation4">
+                        <img src="./imagenes-productos/playStation4.jpg" alt="">
+                        <a href="#" style="width: 100%;">Consola PlayStation 4</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="playStation4" tabindex="-1" aria-labelledby="playStation4Label" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="playStation4Label">Consola PlayStation 4</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p><br><strong>Precio:</strong> $2.299.999 pesos
+                                        <br><strong>Submodelo:</strong> Slim
+                                        <br><strong>Capacidad:</strong> 1000 GB
+                                        <br><strong>Cantidad de controles incluidos:</strong> 2
+                                        <br><strong>Conectividad de red móvil:</strong> 4G
+                                        <br><strong>Con Wi-Fi:</strong> Sí
+                                        <br><strong>Con HDMI:</strong> Sí
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" category="playStation" class="btn product-item p-0 bg-light" data-bs-toggle="modal" data-bs-target="#playStation5">
+                        <img src="./imagenes-productos/playStation5.jpg" alt="">
+                        <a href="#" style="width: 100%;">Consola PlayStation 5</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="playStation5" tabindex="-1" aria-labelledby="playStation5Label" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="playStation5Label">Consola PlayStation 5</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p><br><strong>Precio:</strong> $3.399.900 pesos
+                                        <br><strong>Edición:</strong> God of War Ragnarok Bundle
+                                        <br><strong>Color:</strong> Blanco - Negro
+                                        <br><strong>Accesorios incluidos:</strong> 1 dock, 1 cable de alimentación CA, 1 cable HDMI, 1 cable USB, 1 material impreso
+                                        <br><strong>Formatos de juegos:</strong> Digital, Ultra HD Blu-ray, Blu-ray, DVD
+                                        <br><strong>Resolución máxima de salida de video:</strong> 3840 px x 2160 px
+                                        <br><strong>Capacidad:</strong> 825 GB
+                                        <br><strong>Tipos de memoria:</strong> GDDR6
+                                        <br><strong>Memoria RAM:</strong> 16 GB
+                                        <br><strong>CPU:</strong> AMD Ryzen Zen 2
+                                        <br><strong>GPU:</strong> AMD Radeon
+                                        <br><strong>Velocidad del procesador:</strong> 3.5 GHz
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" category="xbox" class="btn product-item p-0 bg-light" data-bs-toggle="modal" data-bs-target="#xboxClasica">
+                        <img src="./imagenes-productos/xboxClasica.jpg" alt="">
+                        <a href="#" style="width: 100%;">Consola Xbox Clasica</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="xboxClasica" tabindex="-1" aria-labelledby="xboxClasicaLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="xboxClasicaLabel">Consola Xbox Clasica</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p<br><strong>Precio:</strong> $400.000 pesos
+                                        <br><strong>Edición:</strong> Standard
+                                        <br><strong>Formatos de juegos:</strong> Digital, DVD
+                                        <br><strong>Peso:</strong> 3.86 kg
+                                        <br><strong>Capacidad:</strong> 8 GB
+                                        <br><strong>Tipos de memoria:</strong> DDR
+                                        <br><strong>Memoria RAM:</strong> 64 MB
+                                        <br><strong>CPU:</strong> Intel Pentium III
+                                        <br><strong>GPU:</strong> Nvidia NV2A
+                                        <br><strong>Velocidad del procesador:</strong> 733 MHz
+                                        </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" category="xbox" class="btn product-item p-0 bg-light" data-bs-toggle="modal" data-bs-target="#xbox360">
+                        <img src="./imagenes-productos/xbox360.jpg" alt="">
+                        <a href="#" style="width: 100%;">Consola Xbox 360</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="xbox360" tabindex="-1" aria-labelledby="xbox360Label" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="xbox360Label">Consola Xbox 360</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p><br><strong>Precio:</strong> $840.000 pesos
+                                        <br><strong>Formatos de juegos:</strong> DVD,Digital
+                                        <br><strong>Resolución máxima de salida de video:</strong> 1920 px x 1080 px
+                                        <br><strong>Capacidad:</strong> 250 GB
+                                        <br><strong>Tipos de memoria:</strong> GDDR3
+                                        <br><strong>Memoria RAM:</strong> 512 MB
+                                        <br><strong>CPU:</strong> IBM PowerPC
+                                        <br><strong>GPU:</strong> ATI Xenos
+                                        <br><strong>Velocidad del procesador:</strong> 3.2 GHz
+                                        <br><strong>Cantidad de núcleos de CPU:</strong> 3
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" category="xbox" class="btn product-item p-0 bg-light" data-bs-toggle="modal" data-bs-target="#xboxOne">
+                        <img src="./imagenes-productos/xboxOne.jpg" alt="">
+                        <a href="#" style="width: 100%;">Consola Xbox One</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="xboxOne" tabindex="-1" aria-labelledby="xboxOneLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="xboxOneLabel">Consola Xbox One</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p><br><strong>Precio:</strong> $3.174.900 pesos
+                                        <br><strong>Aplicaciones soportadas:</strong> Netflix, Hulu, Microsoft Movies & TV, Amazon Prime Video
+                                        <br><strong>Accesorios incluidos:</strong> 1 cable HDMI, 1 cable de alimentación CA, 1 suscripción a Xbox Live Gold por 14 días
+                                        <br><strong>Formatos de juegos:</strong> Ultra HD Blu-ray, Blu-ray, DVD, Digital
+                                        <br><strong>Resolución máxima de salida de video:</strong> 3840 px x 2160 px
+                                        <br><strong>Capacidad:</strong> 1 TB
+                                        <br><strong>Tipos de memoria:</strong> DDR3
+                                        <br><strong>Memoria RAM:</strong> 8 GB
+                                        <br><strong>CPU:</strong> AMD Jaguar
+                                        <br><strong>GPU:</strong> AMD Radeon
+                                        <br><strong>Velocidad del procesador:</strong> 1.75 GHz
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" category="xbox" class="btn product-item p-0 bg-light" data-bs-toggle="modal" data-bs-target="#xboxSeriesS">
+                        <img src="./imagenes-productos/xboxSeriesS.jpg" alt="">
+                        <a href="#" style="width: 100%;">Consola Xbox Series S</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="xboxSeriesS" tabindex="-1" aria-labelledby="xboxSeriesSLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="xboxSeriesSLabel">Consola Xbox Series S</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p><br><strong>Precio:</strong> $1.899.900 pesos
+                                        <br><strong>Accesorios incluidos:</strong> 1 cable HDMI, 1 cable de alimentación CA
+                                        <br><strong>Resolución máxima de salida de video:</strong> 2560 px * 1440 px
+                                        <br><strong>Capacidad:</strong> 512 GB
+                                        <br><strong>Tipos de memoria:</strong> GDDR6
+                                        <br><strong>Memoria RAM:</strong> 10 GB
+                                        <br><strong>Tipos de memoria:</strong> GDDR6
+                                        <br><strong>Procesador:</strong> AMD Ryzen Zen 2
+                                        <br><strong>GPU:</strong> AMD Radeon RDNA 2
+                                        <br><strong>antidad de núcleos de CPU:</strong> 8
+                                        <br><strong>Velocidad del procesador:</strong> 3.6 GHz
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" category="videoJuegos" class="btn product-item p-0 bg-light" data-bs-toggle="modal" data-bs-target="#marioKart8Deluxe">
+                        <img src="./imagenes-productos/marioKart8Nintendo.jpg" alt="">
+                        <a href="#" style="width: 100%;">Mario Kart 8 Deluxe</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="marioKart8Deluxe" tabindex="-1" aria-labelledby="marioKart8DeluxeLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="marioKart8DeluxeLabel">Mario Kart 8 Deluxe</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p><br><strong>Precio:</strong> $235.367 pesos
+                                        <br><strong>Idiomas de la pantalla:</strong> Español, Inglés, Portugués, Japonés
+                                        <br><strong>Saga:</strong> Mario Kart
+                                        <br><strong>Plataforma:</strong> Nintendo
+                                        <br><strong>Formato:</strong> Físico
+                                        <br><strong>Tamaño del archivo:</strong> 6.9 GB
+                                        <br><strong>Géneros:</strong> Carreras
+                                        <br><strong>Clasificación de juego:</strong> E
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" category="videoJuegos" class="btn product-item p-0 bg-light" data-bs-toggle="modal" data-bs-target="#godOfWarRagnarok">
+                        <img src="./imagenes-productos/godOfWarRagnarokPlayStation.jpg" alt="">
+                        <a href="#" style="width: 100%;">God Of War Ragnarok</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="godOfWarRagnarok" tabindex="-1" aria-labelledby="godOfWarRagnarokLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="godOfWarRagnarokLabel">God Of War Ragnarok</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p><br><strong>Precio:</strong> $306.000 pesos
+                                        <br><strong>Idiomas de la pantalla:</strong> Español, Inglés, Portugués, Japonés
+                                        <br><strong>Edición:</strong> Standard Edition
+                                        <br><strong>Plataforma:</strong> PlaySstation 5
+                                        <br><strong>Desarrolladores:</strong> SIE Santa Monica Studio
+                                        <br><strong>Formato:</strong> Físico
+                                        <br><strong>Géneros:</strong> Acción
+                                        <br><strong>Clasificación de juego:</strong> M
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" category="videoJuegos" class="btn product-item p-0 bg-light" data-bs-toggle="modal" data-bs-target="#grandTheftAutoTheTrilogy">
+                        <img src="./imagenes-productos/grandTheftAutoTheTrilogy.jpg" alt="">
+                        <a href="#" style="width: 100%;">Grand Theft Auto: The Trilogy</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="grandTheftAutoTheTrilogy" tabindex="-1" aria-labelledby="grandTheftAutoTheTrilogyLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="grandTheftAutoTheTrilogyLabel">Grand Theft Auto: The Trilogy</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p><br><strong>Precio:</strong> $158.604 pesos
+                                        <br><strong>Idiomas de la pantalla:</strong> Español, Inglés, Portugués, Japonés
+                                        <br><strong>Edición:</strong> Definitive Edition
+                                        <br><strong>Plataforma:</strong> Xbox Series X
+                                        <br><strong>Desarrolladores:</strong> Rockstar Games
+                                        <br><strong>Formato:</strong> Físico
+                                        <br><strong>Géneros:</strong> Acción, Aventura
+                                        <br><strong>Clasificación de juego:</strong> M
+                                        <br><strong>Tamaño del archivo:</strong> 21.59 GB
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" category="videoJuegos" class="btn product-item p-0 bg-light" data-bs-toggle="modal" data-bs-target="#FIFA23StandardEdition">
+                        <img src="./imagenes-productos/fifa23PlayStation.jpg" alt="">
+                        <a href="#" style="width: 100%;">FIFA 23 Standard Edition</a>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="FIFA23StandardEdition" tabindex="-1" aria-labelledby="FIFA23StandardEditionLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="FIFA23StandardEditionLabel">FIFA 23 Standard Edition</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-4">
+                                    <p><br><strong>Precio:</strong> $225.444 pesos
+                                        <br><strong>Idiomas de la pantalla:</strong> Español, Inglés, Portugués, Japonés
+                                        <br><strong>Edición:</strong> Standard Edition
+                                        <br><strong>Plataforma:</strong> PlayStation 4
+                                        <br><strong>Desarrolladores:</strong> Electronic Arts
+                                        <br><strong>Formato:</strong> Físico
+                                        <br><strong>Géneros:</strong> Deportes, Acción, Simulación
+                                        <br><strong>Clasificación de juego:</strong> E
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerar</button>
+                                    <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------------- INICIO FOOTER ------------------------------------------------->
+    <footer>
+        <div class="d-flex justify-content-center mb-5">
+            <button class="btn btn-primary m-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Developed By</button>
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body small d-flex justify-content-center align-items-center">
+                    Desarrollado por: © Julian Carrillo -------- Páginas web, redes sociales, blogs, ebooks, newsletters, etc.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!------------------------------------------------- FINAL FOOTER ------------------------------------------------->
+
+    <script>
+        /* ------------------------- CAMBIO DE TEXTO EN H1 ------------------------- */
+        // Obtenemos los elementos button
+        const buttons = document.querySelectorAll(".titulo");
+
+        // Obtenemos el elemento h1 con la clase "titulo-principal"
+        const h1 = document.querySelector(".titulo-principal");
+
+        // Agregamos un event listener a cada botón
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                // Obtenemos el texto del botón que se clickeó
+                const title = button.textContent;
+                if (button.classList.contains("titulo") && title === "Todo") {
+                    // Cambiamos el contenido del h1 por el texto "Consola"
+                    h1.textContent = "Consolas";
+                    // Ocultamos el botón de la clase "titulo" con el texto "Todo"
+                } else {
+                    // Si no, cambiamos el contenido del h1 por el texto del botón
+                    h1.textContent = title;
+                }
+            });
+        });
+
+        /* ------------------------- FUNCIONALIDAD DE FILTRADO ------------------------- */
+        document.addEventListener('DOMContentLoaded', function() {
+
+            /* ------------------------- AGREGANDO CLASE ACTIVE AL PRIMER ENLACE ------------------------- */
+            var selectCategoria_Todos = document.querySelector('.category_list .category_item[category="todos"]');
+            selectCategoria_Todos.classList.add('ct_item-active');
+
+            /* ------------------------- FILTRANDO PRODUCTOS  ------------------------- */
+            var categoria = document.querySelectorAll('.category_item');
+            categoria.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var categoriaProducto = this.getAttribute('category');
+
+                    /* ------------------------- AGREGANDO CLASE ACTIVE AL ENLACE SELECCIONADO ------------------------- */
+                    categoria.forEach(function(btn) {
+                        btn.classList.remove('ct_item-active');
+                    });
+                    this.classList.add('ct_item-active');
+
+                    /* ------------------------- OCULTANDO PRODUCTOS ------------------------- */
+                    var productItems = document.querySelectorAll('.product-item');
+                    productItems.forEach(function(producto) {
+                        producto.style.transform = 'scale(0)';
+                    });
+
+                    function ocultarProductos() {
+                        productItems.forEach(function(producto) {
+                            producto.style.display = 'none';
+                        });
+                    }
+                    setTimeout(ocultarProductos, 400);
+
+                    /* ------------------------- MOSTRANDO PRODUCTOS ------------------------- */
+                    function mostrarProductos() {
+                        var elementosFiltrados = document.querySelectorAll('.product-item[category="' + categoriaProducto + '"]');
+                        elementosFiltrados.forEach(function(producto) {
+                            producto.style.display = 'flex';
+                            producto.style.transform = 'scale(1)';
+                        });
+                    }
+                    setTimeout(mostrarProductos, 400);
+                });
+            });
+
+            /* ------------------------- MOSTRANDO TODOS LOS PRODUCTOS ------------------------- */
+            var categoria_Todos = document.querySelector('.category_item[category="todos"]');
+            categoria_Todos.addEventListener('click', function() {
+                function mostrarTodo() {
+                    var productItems = document.querySelectorAll('.product-item');
+                    productItems.forEach(function(producto) {
+                        producto.style.display = 'flex';
+                        producto.style.transform = 'scale(1)';
+                    });
+                }
+                setTimeout(mostrarTodo, 400);
+            });
+        });
+    </script>
+</body>
+
+</html>

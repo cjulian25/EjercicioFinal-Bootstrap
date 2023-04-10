@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Ejercicio-FinalBootstrap-dia30mar.css">
+    <link rel="stylesheet" href="./bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>VideoGames Shopping Online</title>
+</head>
+
+<body>
+    <div id="home"></div>
+
+    <!------------------------------------------------- INICIO HEADER ------------------------------------------------->
+    <header class="row container-fluid d-flex justify-content-between align-items-center me-auto ms-auto" style="width: 100%;">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-1 col-xxl-1 mt-1 d-flex justify-content-center">
+            <img src="./imagenes-iconos/logo.gif" alt="" class="figure-img img-fluid border rounded-2 " style="width: 120px; height: 80px;">
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3">
+            <div class="row text-center">
+                <h1 class="col-sm-12 col-md-12 col-lg-12 text-light">VideoGames</h1>
+                <h4 class="col-sm-12 col-md-12 col-lg-12 text-light">Shopping Online</h4>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-2 col-xxl-2 d-flex justify-content-center align-items-center">
+            <img src="./imagenes-iconos/whatsapp.svg" alt="" class="figure-img img-fluid" style="width: 30px; height: 30px; font-size: 15px;">
+            <h3 class="text-light">3124567890</h3>
+        </div>
+    </header>
+    <!------------------------------------------------- FINAL HEADER ------------------------------------------------->
+
+    <!------------------------------------------------- INICIO NAV ------------------------------------------------->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top mb-5">
+        <div class="container-fluid">
+            <a href="#home"><img src="./imagenes-iconos/casa.png" alt="" style="width: 50px; height: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#quienesSomos">¿Quienes Somos?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./ventaProductos.html">Productos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="./ventaConsolasSegundaMano.html">Vende tus consolas de segunda mano</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                                <a class="dropdown-item" href="./reparacionConsolas.html">Reparacion de Consolas y Accesorios</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#formulario">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!------------------------------------------------- FINAL NAV ------------------------------------------------->
+
+
+    <!------------------------------------------------- INICIO MAIN ------------------------------------------------->
+    <main>
+        <!------------------------------------------------- INICIO CARRUSEL ------------------------------------------------->
+        <div id="carouselExampleCaptions" class="carousel slide carrusel--inicio border border-opacity-10 rounded-4 bg-light mt-5 carrusel mb-3" data-bs-ride="carousel" style="overflow: hidden;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active border border-2" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class="border border-2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class="border border-2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4" class="border border-2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <a href="./ventaProductos.html"><img src="./imagenes-iconos/consolas.jpg" class="d-block w-100 imagen" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Consolas</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <a hred=""><img src="./imagenes-iconos/controles.jpg" class="d-block w-100 imagen" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Controles y Accesorios</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <a href="./ventaProductos.html"><img src="./imagenes-iconos/videojuegoss.jpg" class="d-block w-100 imagen" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Video Juegos</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <a href="./reparacionConsolas.html"><img src="./imagenes-iconos/soporte-tecnico.png" class="d-block w-100 imagen" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Soporte tecnico</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <button class="carousel-control-prev boton--carrusel" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next boton--carrusel" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!------------------------------------------------- FINAL CARRUSEL ------------------------------------------------->
+
+        <hr class="border border-primary border-3 m-5" id="quienesSomos" style="width: 80%;">
+
+        <div class="row bg-dark bg-opacity-50 rounded-3 p-3 d-flex mt-3 mb-3" style="width: 90%; height: 100%;">
+
+            <!------------------------------------------------- INICIO ACORDION ------------------------------------------------->
+
+            <div class="col col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 col-12 mt-auto mb-auto">
+                <div style="overflow: hidden;">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                          MISION
+                        </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse p-3" data-bs-parent="#accordionFlushExample" style="overflow: scroll;">
+                                <p>Nuestra misión es ofrecer una experiencia de juego excepcional a nuestros clientes a través de la venta de consolas de videojuegos de alta calidad y última generación. Nos esforzamos por proporcionar una amplia selección
+                                    de consolas, accesorios y juegos para satisfacer todas las necesidades de gaming de nuestros clientes.
+                                    <br><br>Nos enorgullece ofrecer un servicio excepcional a nuestros clientes, asegurándonos de que su experiencia de compra sea fácil, satisfactoria y sin preocupaciones. Nos esforzamos por ser líderes en el mercado
+                                    de venta de consolas de videojuegos, y para lograrlo, nos mantenemos al tanto de las últimas tendencias y tecnologías para ofrecer siempre las opciones más innovadoras y emocionantes a nuestros clientes.
+                                    <br><br>Además, estamos comprometidos con la satisfacción del cliente y trabajamos incansablemente para garantizar que nuestros clientes estén satisfechos con sus compras y con la atención al cliente que reciben. Creemos
+                                    que la pasión por los videojuegos une a las personas y fortalece la comunidad de gamers, y nos esforzamos por ser un pilar en esta comunidad.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          VISION
+                        </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse p-3" data-bs-parent="#accordionFlushExample">
+                                <p>Nuestra visión es ser la mejor tienda de consolas de videojuegos, ofreciendo una experiencia excepcional de compra y un servicio al cliente excepcional para todos nuestros clientes.
+                                    <br><br>Como empresa, estamos comprometidos con la satisfacción del cliente y trabajamos incansablemente para garantizar que nuestros clientes estén completamente satisfechos con su compra y con la atención al cliente
+                                    que reciben. Nos enorgullece ofrecer un servicio amigable, profesional y personalizado, para que nuestros clientes sientan que son tratados como amigos y no solo como clientes. </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                          VALORES
+                        </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse p-3" data-bs-parent="#accordionFlushExample">
+                                <div>
+                                    <p><strong>Pasión por los videojuegos</strong>
+                                        <br>Creemos que los videojuegos son una forma de arte y entretenimiento que puede unir a las personas y enriquecer sus vidas. Nos apasiona lo que hacemos y estamos comprometidos con brindar a nuestros clientes la
+                                        mejor experiencia de juego posible.<br>
+                                    </p>
+                                    <p><strong>Excelencia</strong>
+                                        <br>Nos esforzamos por ser los mejores en todo lo que hacemos, desde la selección de productos hasta la atención al cliente y la experiencia de compra. Buscamos la excelencia en todo momento y en todos los aspectos
+                                        de nuestro negocio.
+                                        <br>
+                                    </p>
+                                    <p><strong>Honestidad e integridad</strong>
+                                        <br>Valoramos la honestidad y la integridad en todo lo que hacemos. Nos esforzamos por ser honestos, transparentes y éticos en nuestras relaciones con los clientes, proveedores y empleados.
+                                        <br>
+                                    </p>
+                                    <p><strong>Servicio al cliente</strong>
+                                        <br>La satisfacción del cliente es nuestra máxima prioridad. Nos comprometemos a brindar un servicio al cliente excepcional, amable, profesional y personalizado en todo momento.
+                                        <br>
+                                    </p>
+                                    <p><strong>Innovación</strong>
+                                        <br><br>Nos mantenemos a la vanguardia de las últimas tendencias y tecnologías en el mundo del gaming, y buscamos constantemente nuevas formas de mejorar la experiencia de juego de nuestros clientes y la eficiencia
+                                        de nuestro negocio.
+                                        <br>
+                                    </p>
+                                    <p><strong>Trabajo en equipo</strong>
+                                        <br>Fomentamos un ambiente de trabajo colaborativo, inclusivo y apasionado por los videojuegos. Valoramos la diversidad de opiniones y habilidades, y trabajamos juntos para lograr nuestros objetivos comunes.
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-------- Button trigger modal -------->
+                <div class="text-center mt-5 mb-4">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Donar
+                </button>
+                </div>
+                <!-------- Modal -------->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Haz Tu Donacion</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                I Need Money :c
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-primary">Hacer donacion</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------------------- FINAL ACORDION ------------------------------------------------->
+
+            <!------------------------------------------------- INICIO QUIENES SOMOS ------------------------------------------------->
+            <div class="col col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12 col-12">
+                <div class="row d-flex">
+                    <div class="col-12 pt-4 mb-4 text-center text-white" style="height: 40px;">
+                        <h2>¿Quienes Somos?</h2>
+                    </div>
+                    <div class=" col col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 mt-5 mb-5 d-flex justify-content-center align-items-center">
+                        <img class="img-fluid border rounded-3 overflow-hidden" src="./imagenes-iconos/logo.gif" alt="" style="width: 100%; max-width: 450px; height: 200px;">
+                    </div>
+                    <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12 mt-5 d-flex align-items-center text-white text-wrap">
+                        <p>Nuestra empresa se especializa en la venta de consolas de videojuegos de alta calidad y última generación para entusiastas del gaming y aficionados de todas las edades. Ofrecemos una amplia variedad de consolas, incluyendo las
+                            marcas líderes del mercado como PlayStation, Xbox y Nintendo, así como una selección de accesorios y juegos para complementar tu experiencia de juego. <br>
+                            <br> Nos enorgullece ofrecer un servicio excepcional a nuestros clientes, asegurándonos de que su experiencia de compra sea fácil y satisfactoria. Nuestro equipo de atención al cliente está siempre disponible para responder
+                            cualquier pregunta y ofrecer asesoramiento experto sobre las mejores opciones para tus necesidades de juego. <br>
+                            <br> Además, nos aseguramos de mantenernos al tanto de las últimas tendencias y tecnologías en el mundo del gaming, para ofrecer siempre las opciones más innovadoras y emocionantes a nuestros clientes. Ya sea que busques una
+                            consola para jugar en solitario o en línea con amigos, tenemos lo que necesitas para llevar tu experiencia de juego al siguiente nivel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------------------- FINAL QUIENES SOMOS ------------------------------------------------->
+
+        <hr class="border border-primary border-3 m-5" style="width: 80%;">
+
+        <!------------------------------------------------- INICIO CARTAS ------------------------------------------------->
+
+        <div class="row bg-dark bg-opacity-50 rounded-3 p-3 d-flex gap-4 justify-content-center mt-3 mb-3" style="width: 90%; height: 100%;">
+            <div clas="col-12 m-5">
+                <h2 class="text-center m-4" style="color:white;">Ultimas Novedades</h2>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://media.vandal.net/i/640x360/4-2023/20234815501872_1.jpg" class="card-img-top mt-2 me-auto ms-auto rounded-3 overflow-hidden" alt="..." style="width: 200px; height: 200px;">
+                <div class="card-body">
+                    <h5 class="card-title">7 juegos con finales absurdos</h5>
+                    <p class="card-text">El mundo de los videojuegos está lleno de grandes finales. Un guión mediocre puede ser salvado por una conclusión bien trabajada y viceversa, así que saber cerrar tu historia es fundamental. Pero luego hay gente que decide que su videojuego
+                        tendrá un final absurdo, raro o estúpido.
+                    </p>
+                    <a class="icon-link icon-link-hover d-flex justify-content-center mb-2" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="https://vandal.elespanol.com/noticia/1350761401/7-juegos-con-finales-absurdos/">
+                        Ver info
+                        <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.levelup.com/uploads/images/791997/791997_1140x516.jpg" class="card-img-top mt-1 me-auto ms-auto rounded-3 overflow-hidden" alt="..." style="width: 200px; height: 200px;">
+                <div class="card-body">
+                    <h5 class="card-title">Microsoft quitó los emuladores de Xbox, pero dice que Nintendo no tiene la culpa</h5>
+                    <p class="card-text mt-1">La semana pasada, Microsoft eliminó la posibilidad de usar emuladores de consolas Nintendo y PlayStation en Xbox Series X, Xbox Series S y Xbox One. Según un reporte, se trató de una decisión que tomaron por culpa de Nintendo, pero
+                        la realidad es diferente.</p>
+                    <a class="icon-link icon-link-hover d-flex justify-content-center mt-2 mb-2" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="https://www.levelup.com/noticias/732368/Microsoft-quito-los-emuladores-de-Xbox-pero-dice-que-Nintendo-no-tiene-la-culpa">
+                        Ver info
+                        <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://cl.buscafs.com/www.levelup.com/public/uploads/images/791987/791987_1140x516.jpg" class="card-img-top mt-2 me-auto ms-auto rounded-3 overflow-hidden" alt="..." style="width: 200px; height: 200px;">
+                <div class="card-body">
+                    <h5 class="card-title">Super Mario Bros. La Película ya es la cinta animada con mejor debut en la historia</h5>
+                    <p class="card-text">Super Mario Bros. La Película se estrenó a mediados de la semana pasada. Si bien muchos ya esperaban que esta cinta fuera un éxito comercial, lo que muchos no veían venir es que fuera una producción que no se cansaría de hacer historia.
+                    </p>
+                    <a class="icon-link icon-link-hover d-flex justify-content-center mt-2 mb-2" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="https://www.levelup.com/noticias/732356/Super-Mario-Bros-La-Pelicula-ya-es-la-cinta-animada-con-mejor-debut-en-la-historia-supero-a-Frozen-2">
+                        Ver info
+                        <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://media.vandal.net/i/640x360/4-2023/2023499253055_1.jpg" class="card-img-top mt-2 me-auto ms-auto rounded-3 overflow-hidden" alt="..." style="width: 200px; height: 200px;">
+                <div class="card-body">
+                    <h5 class="card-title">CoD Warzone 2 añadirá cambios 'cruciales' para los francotiradores en la temporada 3</h5>
+                    <p class="card-text">Los rifles de francotirador llevan siendo objeto de queja entre la comunidad de Call of Duty: Warzone 2.0 desde el mismo instante en el que el battle royale aterrizó en consolas y PC...
+                    </p>
+                    <a class="icon-link icon-link-hover d-flex justify-content-center mb-2" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="https://vandal.elespanol.com/noticia/1350761404/cod-warzone-2-anadira-cambios-cruciales-para-los-francotiradores-en-la-temporada-3/">
+                        Ver info
+                        <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------------------- FIN CARTAS ------------------------------------------------->
+
+        <hr class="border border-primary border-3 m-5" style="width: 80%;">
+
+        <!------------------------------------------------- INICIO FORMULARIO ------------------------------------------------->
+        <div class="bg-dark bg-opacity-50 d-flex flex-direction-column justify-content-center rounded-3 mb-5 mt-3" style="width: 90%; height: 100%;">
+
+            <form class="d-flex row mt-5" style="width: 70%; height: 80%;" id="formulario">
+                <div class="col-12 text-white mb-4 d-flex justify-content-center">
+                    <h2>Contactanos</h2>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6 mb-4">
+                    <div class="input-group">
+                        <span id="nombreUsuario" class="input-group-text">Nombres</span>
+                        <input class="form-control" type="text" aria-label="name" aria-describedby="nombreUsuario">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6 mb-4">
+                    <div class="input-group">
+                        <span id="apellidoUsuario" class="input-group-text">Apellido</span>
+                        <input class="form-control" type="text" aria-label="lastname" aria-describedby="apellidoUsuario">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6 mb-4">
+                    <div class="input-group">
+                        <span id="emailUsuario" class="input-group-text">E-mail</span>
+                        <input class="form-control" type="e-mail" aria-label="name" aria-describedby="emailUsuario">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6 mb-4">
+                    <div class="input-group">
+                        <span id="telefonoUsuario" class="input-group-text">telefono</span>
+                        <input class="form-control" type="tel" aria-label="lastname" aria-describedby="telefonoUsuario">
+                    </div>
+                </div>
+
+                <div class="col-12 mb-4">
+                    <div class="form-floating">
+                        <textarea class="form-control" id="floatingTextarea" style="height: 100px;"></textarea>
+                        <label for="floatingTextarea">Mensaje</label>
+                    </div>
+                </div>
+
+                <div class="mb-4 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">
+                        Enviar
+                    </button>
+                </div>
+
+            </form>
+        </div>
+        <!------------------------------------------------- FINAL FORMULARIO ------------------------------------------------->
+    </main>
+    <!------------------------------------------------- FINAL MAIN ------------------------------------------------->
+
+
+    <!------------------------------------------------- INICIO FOOTER ------------------------------------------------->
+    <footer>
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-primary mb-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Developed By</button>
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body small d-flex justify-content-center align-items-center">
+                    Desarrollado por: © Julian Carrillo -------- Páginas web, redes sociales, blogs, ebooks, newsletters, etc.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!------------------------------------------------- FINAL FOOTER ------------------------------------------------->
+
+</body>
+
+</html>
